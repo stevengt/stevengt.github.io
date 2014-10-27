@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>About - My Octopress Blog</title>
+  <title>Degrees of Separation in Movies - My Octopress Blog</title>
   <meta name="author" content="Steven Thomas">
 
   
-  <meta name="description" content="">
+  <meta name="description" content="Here&rsquo;s a fun fact for you: 91% of all movies are within six degrees of separation from each other. According to IMDb, anyway. I recently wrote &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://stevengt.github.io">
+  <link rel="canonical" href="http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -75,89 +75,12 @@
 </nav>
       <div id="main">
           <div id="content">
-		
-		
-
-
-
-
-		<div class="blog-index">
-
-				<div id="about_me">
-					
-					<div id="personal_description">	
-						<h1>About Me</h1>
-						<p>I am a junior Computer Science student at the University of North Carolina at Chapel Hill. My biggest interests at 							the moment include web development and database management, but I&#8217;d like to gain experience in other skills as well.
-						</p>
-
-						<p>In my free time I also enjoy <a href="http://www.steventhomasmusic.weebly.com">making music</a> and <a href="https://drive.google.com/folderview?id=0B-KCIy-ewl1Qdy1OOUpaVFVvNE0&usp=sharing">art</a>.</p>
-
-					</div>
-
-					<img src="/images/me.jpg" id="my_picture">
-
-				</div>
-					<!-- ENDS about_me-->
-
-
-
-
-
-
-
-
-
-
-
-  			
-  			
-  			
-    			<article>
-      				
+              <div>
+<article class="hentry" role="article">
+  
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/10/27/connecting-to-ms-access-in-java/">Connecting to MS Access in Java</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2014-10-27T11:31:43-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>27</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>11:31 am</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Java has stopped supporting the JDBC-ODBC Bridge with the release of JDK 8, so here is my (somewhat quick and dirty) way of working with MS Access.</p>
-
-<p>There are various alternatives you can try out such as <a href="http://ucanaccess.sourceforge.net/site.html">UCanAccess</a>, <a href="https://code.google.com/p/pypyodbc/">PyPyODBC</a>, or Easysoft&rsquo;s <a href="http://www.easysoft.com/developer/languages/c/odbc_tutorial.html#pre_req">API</a>. I&rsquo;ve messed around with a few of these and I feel that they aren&rsquo;t quite as powerful as the bridge offered in previous versions of Java, and I don&rsquo;t have the time right now to improve my C skills enough for the particular project I&rsquo;m working on.</p>
-
-<p>My solution, which seems to work fine so far, is to install Java 7 alongside Java 8, and use the built in JDBC-ODBC bridge. If portability is a concern for you then maybe this isn&rsquo;t your best option, but for my purposes I&rsquo;m fine with wrapping the code up in an executable.</p>
-
-<p>If this is all you need to get set up, then great! I&rsquo;m happy for you, I really am.</p>
-
-<p><img src="/images/2014-10-27-connecting-to-ms-access-in-java/happy.jpg" style="width:50%; height:50%"/></p>
-
-<p>I had trouble connecting to the ODBC driver, though, because I&rsquo;m using 32-bit MS Office on a 64-bit system. If this is a problem for you, too, then installing the Microsoft ACE OLEDB Provider as outlined <a href="http://blog.codefluententities.com/2011/01/20/microsoft-access-database-engine-2010-redistributable/">here</a> will help. Make sure you launch the installer from a command line with the &ldquo;/passive&rdquo; argument. Be wary that this might make Office behave strangely. I haven&rsquo;t noticed anything too bad so far, except that it now takes a minute or two to launch Office.</p>
-
-<p>Hope this helps. This is a bit of a quick fix to meet a time constraint, so there are probably better ways to do this. If you have suggestions please share them below!</p>
-</div>
-  
-  
-
-
-    			</article>
-  			
-  			
-    			<article>
-      				
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/10/26/degrees-of-separation-in-movies/">Degrees of Separation in Movies</a></h1>
+      <h1 class="entry-title">Degrees of Separation in Movies</h1>
     
     
       <p class="meta">
@@ -173,7 +96,7 @@
   </header>
 
 
-  <div class="entry-content"><p>Here&rsquo;s a fun fact for you: 91% of all movies are within six degrees of separation from each other.</p>
+<div class="entry-content"><p>Here&rsquo;s a fun fact for you: 91% of all movies are within six degrees of separation from each other.</p>
 
 <p>According to IMDb, anyway.</p>
 
@@ -233,16 +156,61 @@
 
 <p><img src="/images/2014-10-26-degrees-of-separation-in-movies/cage.jpg" style="width:40%"/></p>
 </div>
-  
-  
 
 
-    			</article>
-  			
-		</div>
-		<aside class="sidebar">
-  			
-    			  
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Steven Thomas</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2014-10-26T20:36:15-04:00'><span class='date'><span class='date-month'>Oct</span> <span class='date-day'>26</span><span class='date-suffix'>th</span>, <span class='date-year'>2014</span></span> <span class='time'>8:36 pm</span></time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/degrees-of-separation/'>degrees of separation</a>, <a class='category' href='/blog/categories/homestuck/'>homestuck</a>, <a class='category' href='/blog/categories/movies/'>movies</a>, <a class='category' href='/blog/categories/nicolas-cage/'>nicolas cage</a>, <a class='category' href='/blog/categories/python/'>python</a>, <a class='category' href='/blog/categories/sql/'>sql</a>, <a class='category' href='/blog/categories/sqlite/'>sqlite</a>, <a class='category' href='/blog/categories/the-wizard-of-oz/'>the wizard of oz</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/" data-via="" data-counturl="http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/10/27/connecting-to-ms-access-in-java/" title="Next Post: Connecting to MS Access in Java">Connecting to MS Access in Java &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+      
 <form id="search_bar" action="https://www.google.com/search" method="get">
   <fieldset role="search">
     <input type="hidden" name="q" value="site:stevengt.github.io" />
@@ -316,8 +284,10 @@
 
 </section>
 
-  			
-		</aside>
+  
+</aside>
+
+
           </div>
       </div>
      
@@ -337,7 +307,10 @@
       var disqus_shortname = 'stevengt-blog';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/';
+        var disqus_url = 'http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
