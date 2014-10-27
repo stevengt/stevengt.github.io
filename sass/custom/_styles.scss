@@ -1,0 +1,320 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+html{
+	height: 100%;
+	line-height: 1;
+	color: #49494b;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:  100%;
+	font-size: 14px;
+	margin: 0;
+	
+}
+
+#banner_background{
+	height: 134px;
+	width: 100%;
+	background: #e5e3dc url(/images/abstract_pattern_wallpaper.jpg);
+	border-bottom: 1px solid #fff;
+	padding-bottom: 3em;
+}
+
+#banner_background .degree {
+	background: url(/images/top-degree.png) repeat-x;
+	height: 100%;
+	width: 100%;
+}
+
+#body_wrapper>header{
+	margin-top: -189px;
+	background: initial;
+}
+
+#body_wrapper>nav{
+	background: none;
+	font-size: 0.9em;
+	position: relative;
+	float: right;
+	margin-top: -50px;
+	border: none;
+	
+}
+
+#body_wrapper>nav a {
+	font-family: 'Ubuntu';
+	text-shadow: none;
+	font-size: 1.25em;
+}
+
+#body_wrapper>nav a, #body_wrapper>nav a:visited{
+	color: #E5824A;
+}
+
+#body_wrapper>nav a:hover {
+	color:#BD4409;
+}
+
+body{
+	position: relative;
+	min-height: 100%;
+	margin: 0;
+	background: linear-gradient(white, #0052CC);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding-bottom: 20px;
+
+}
+
+
+#body_wrapper{
+	min-height:100%;
+	margin-bottom: 6em;
+}
+
+aside.sidebar{
+	font-size: 1.2em;
+}
+
+aside.sidebar h1{
+	font-size: 19px;
+}
+
+#search_bar, .subscription {
+	display: inline-block;
+}
+
+.search{
+	padding-right: 4em;
+	margin-right: 0.5em;
+}
+
+#subscription_link{
+	position: absolute;
+	text-indent: -999999em;
+	margin-top: -10px;
+}
+
+
+#main {
+	overflow:auto;
+	padding-bottom: 60px;  /* must be same height as the footer */
+	border-radius: 10px;
+	box-shadow: 7px 7px 10px #222222;
+}
+
+.blog-index>div{
+	margin-top: 55px;
+	padding-right: 55px;
+	padding-left: 55px;
+}
+
+#about_me{
+	min-height: 270px;
+	margin-bottom: -2em;
+	background: url("/images/dotted-border.png") bottom left repeat-x;
+}
+
+#about_me h1{
+	font-size: 2.2em;
+}
+
+#personal_description{
+	display: inline-block;
+	float: left;
+	width: 60%;
+}
+
+
+#my_picture{
+	float: right;
+	max-width: 30%;
+}
+
+#footer {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background: #e5e3dc url(/images/abstract_pattern_wallpaper.jpg);
+	border-top: 1px solid #fff;
+}
+
+#footer footer{
+	font-family: "PT Sans","Helvetica Neue",Arial,sans-serif;
+	color:white;
+	padding: 1.5em;
+	padding-left:6em;
+}
+
+#footer p{
+	margin: 0 auto;
+}
+
+#footer .degree {
+	background: url(/images/top-degree.png) repeat-x;
+	height: 100%;
+	width: 100%;
+}
+
+
+
+/* RESUME-----------------------------------------------------------------*/
+
+
+#cv_wrapper{
+	display: block;
+	overflow: auto;
+	background-color: #f5f5f5;
+	color: #333;
+	width: 790px;
+	padding:10px 80px;
+	font-family: Georgia;
+	font:arial,helvetica,sans-serif;
+	
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 8em;
+	margin-top: -7em;
+}
+
+#cv_wrapper h1,h2,h3,h4{
+	font-family: Georgia;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+
+
+#cv_wrapper li{
+	margin-bottom: 0.5em;
+}
+
+#hd{
+	padding-top: 3em;
+}
+
+#hd .contact-info{
+	width:32%;
+	display: inline-block;
+	float: right;
+	font-size: 12pt;
+}
+
+#hd .contact-info>p{
+	padding-bottom: 0.5em;
+	margin-bottom: 0;
+}
+
+#header_wrapper{
+	display: inline-block;
+	width:60%;
+}
+
+
+
+#hd h1{
+	font-size: 48px;
+	letter-spacing: 3px;
+}
+
+#hd h2{
+	letter-spacing: 2px;
+	font-size: 28px;
+}
+
+
+#cv_wrapper a{
+	color:#990003;
+	z-index:999999;
+}
+
+#cv_wrapper h4{
+	float: right;
+}
+
+#cv_wrapper>div{
+	display: block;
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #ccc;
+	overflow: auto;
+	background-color: #f5f5f5;
+	border-right: none;
+}
+
+.cv_content_wrapper{
+	width:80.2%;
+	float: right;
+}
+
+.cv_content_wrapper>div{
+	position: relative;
+
+}
+
+.section_title{
+	width: 12.3%;
+	float: left;
+	display: block;
+	font-size: 150%;
+	font-style: italic;
+	color: #333;
+}
+
+
+#cv_wrapper .indent {
+	display: inline-block;
+	margin-left: 1.5em;
+	margin-top: 0.5em;
+}
+
+
+#cv_wrapper li,.project_description{
+	color: #444;
+}
+
+#cv_wrapper>#ft{
+	padding-bottom:4em;
+	font-size: 92%;
+	text-align: center;
+	border-bottom:0;
+}
+
+.project {
+	position: relative;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+}
+
+.last{
+	border:none;
+}
+
+#cv_wrapper .experience{
+	padding-bottom: 0;
+}
+
+.experience h2,h4{
+	display: inline;
+}
+
+.experience h3{
+	padding-bottom: 0.5em;
+}
+
+#education h3,h4{
+	display: inline;
+}
+
+#education .gpa{
+	font-style: bold;
+	padding-bottom: 0.5em;
+}
+
+.Major ul{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+

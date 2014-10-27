@@ -1,0 +1,22 @@
+// This File is imported last, and will override other styles in the cascade
+// Add styles here to make changes without digging in too much
+
+html{
+	line-height: 1;
+	color: #49494b;
+	/*background: #f0efeb;*/
+	background: linear-gradient(white, #0052CC);
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size:  100%;
+	font-size: 14px;
+	padding-bottom: 90px;
+}
+
+body>header{
+	height: 134px;
+	background: #e5e3dc url(/images/abstract_pattern_wallpaper.jpg);
+	background-attachment: fixed;
+	margin-left: -400px;
+	margin-right: -400px;
+	border-bottom: 1px solid #fff;
+}

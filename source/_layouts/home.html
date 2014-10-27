@@ -1,0 +1,72 @@
+{% capture root_url %}{{ site.root | strip_slash }}{% endcapture %}
+{% include head.html %}
+<body {% if page.body_id %} id="{{ page.body_id }}" {% endif %} {% if page.sidebar == false %} class="no-sidebar" {% endif %} {% if page.sidebar == 'collapse' or site.sidebar == 'collapse' %} class="collapse-sidebar sidebar-footer" {% endif %}>
+  <header id="banner_background">
+    <div class ="degree"></div>
+  </header>
+  <div id="body_wrapper">
+      <header role="banner">{% include header.html %}</header> 
+      <nav role="navigation">{% include navigation.html %}</nav>
+      <div id="main">
+          <div id="content">
+		
+		
+
+
+
+
+		<div class="blog-index">
+
+				<div id="about_me">
+					
+					<div id="personal_description">	
+						<h1>About Me</h1>
+						<p>I am a junior Computer Science student at the University of North Carolina at Chapel Hill. My biggest interests at 							the moment include web development and database management, but I'd like to gain experience in other skills as well.
+						</p>
+
+						<p>In my free time I also enjoy <a href="http://www.steventhomasmusic.weebly.com">making music</a> and <a href="https://drive.google.com/folderview?id=0B-KCIy-ewl1Qdy1OOUpaVFVvNE0&usp=sharing">art</a>.</p>
+
+					</div>
+
+					<img src="/images/me.jpg" id="my_picture">
+
+				</div>
+					<!-- ENDS about_me-->
+
+
+
+
+
+
+
+
+
+
+
+  			{% assign index = true %}
+  			{% for post in site.posts limit: site.recent_posts %}
+  			{% assign content = post.content %}
+    			<article>
+      				{% include article.html %}
+    			</article>
+  			{% endfor %}
+		</div>
+		<aside class="sidebar">
+  			{% if site.blog_index_asides.size %}
+    			{% include_array blog_index_asides %}
+  			{% else %}
+    			{% include_array default_asides %}
+  			{% endif %}
+		</aside>
+          </div>
+      </div>
+     
+  </div><!--ENDS BODY WRAPPER-->
+<div id="footer">
+    <div class="degree">
+        <footer role="contentinfo">{% include footer.html %}</footer>
+        {% include after_footer.html %}
+    </div>
+</div>
+</body>
+</html>
