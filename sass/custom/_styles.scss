@@ -11,6 +11,12 @@ html{
 	
 }
 
+
+
+#logo {
+	max-width: 8em;
+}
+
 #banner_background{
 	height: 9.6em;
 	width: 100%;
@@ -29,6 +35,16 @@ html{
 	margin-top: -9em;
 	background: initial;
 }
+
+#body_wrapper>header hgroup {
+	width: 17.2em;
+}
+
+#body_wrapper>header h1,
+#body_wrapper>header a, #logo {
+	width: inherit;
+}
+
 
 #body_wrapper>nav{
 	background: none;
@@ -167,8 +183,8 @@ aside.sidebar h1{
 	overflow: auto;
 	background-color: #f5f5f5;
 	color: #333;
-	width: 790px;
-	padding:10px 80px;
+	width: 56.8em;
+	padding: 0.7em 5.75em;
 	font-family: Georgia;
 	font:arial,helvetica,sans-serif;
 	
