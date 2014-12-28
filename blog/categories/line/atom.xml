@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Line, | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/line/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2014-12-04T23:55:16-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Printing on Green Bar Style Paper]]></title>
+    <link href="http://stevengt.github.io/blog/2014/11/30/printing-on-green-bar-style-paper/"/>
+    <updated>2014-11-30T11:19:56-05:00</updated>
+    <id>http://stevengt.github.io/blog/2014/11/30/printing-on-green-bar-style-paper</id>
+    <content type="html"><![CDATA[<p>I like to look at code on green bar style paper, where alternating rows are different colors, because it&rsquo;s easier to read. I don&rsquo;t own actual paper to print it on but I found a neat command line tool <a href="http://www.perlmonks.org/bare/?node_id=391709">here</a> to export a program to a PostScript file with the appropriate styling. For example, using a2ps the following command will create a PostScript file that styles the program test.py .</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a2ps &ndash;prologue=matrix -o test.ps test.py</span></code></pre></td></tr></table></div></figure></p>
+]]></content>
+  </entry>
+  
+</feed>

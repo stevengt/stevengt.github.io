@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Complex | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/complex/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2014-12-04T23:55:16-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Game of Go as a Complex Network]]></title>
+    <link href="http://stevengt.github.io/blog/2014/12/03/the-game-of-go-as-a-complex-network/"/>
+    <updated>2014-12-03T20:45:53-05:00</updated>
+    <id>http://stevengt.github.io/blog/2014/12/03/the-game-of-go-as-a-complex-network</id>
+    <content type="html"><![CDATA[<p>I wrote some code in Python to construct a Pagerank vector of moves in the game of Go. Georgeot and Giraud discuss this method in their <a href="http://arxiv.org/abs/1105.2470">paper</a> but do not include any sample code, so I decided it would be fun to implement it myself and run it on some sample data from the <a href="http://www.u-go.net/gamerecords/">K Go Server</a>.</p>
+
+<p>The code on my <a href="https://github.com/stevengt/Go-Network">GitHub</a> should be a good starting point if you&rsquo;re looking to construct a network of moves in Go, although there are some differences in my implementation and the one used by Georgeot and Giraud – for example, I do not take into account all the symmetries of plaquettes that they do. Here is a comparison of the top ten moves for λ<sub>1</sub>.</p>
+
+<p><img src="/images/2014-12-03-the-game-of-go-as-a-complex-network/go.png" style="width:65%; height:65%"/></p>
+]]></content>
+  </entry>
+  
+</feed>

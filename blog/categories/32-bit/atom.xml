@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 32-bit | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/32-bit/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2014-12-04T23:55:16-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Connecting to MS Access in Java]]></title>
+    <link href="http://stevengt.github.io/blog/2014/10/27/connecting-to-ms-access-in-java/"/>
+    <updated>2014-10-27T11:31:43-04:00</updated>
+    <id>http://stevengt.github.io/blog/2014/10/27/connecting-to-ms-access-in-java</id>
+    <content type="html"><![CDATA[<p>Java has stopped supporting the JDBC-ODBC Bridge with the release of JDK 8, so here is my (somewhat quick and dirty) way of working with MS Access.</p>
+
+<p>There are various alternatives you can try out such as <a href="http://ucanaccess.sourceforge.net/site.html">UCanAccess</a>, <a href="https://code.google.com/p/pypyodbc/">PyPyODBC</a>, or Easysoft&rsquo;s <a href="http://www.easysoft.com/developer/languages/c/odbc_tutorial.html#pre_req">API</a>. I&rsquo;ve messed around with a few of these and I feel that they aren&rsquo;t quite as powerful as the bridge offered in previous versions of Java, and I don&rsquo;t have the time right now to improve my C skills enough for the particular project I&rsquo;m working on.</p>
+
+<p>My solution, which seems to work fine so far, is to install Java 7 alongside Java 8, and use the built in JDBC-ODBC bridge. If portability is a concern for you then maybe this isn&rsquo;t your best option, but for my purposes I&rsquo;m fine with wrapping the code up in an executable.</p>
+
+<p>If this is all you need to get set up, then great! I&rsquo;m happy for you, I really am.</p>
+
+<p><img src="/images/2014-10-27-connecting-to-ms-access-in-java/happy.jpg" style="width:50%; height:50%"/></p>
+
+<p>I had trouble connecting to the ODBC driver, though, because I&rsquo;m using 32-bit MS Office on a 64-bit system. If this is a problem for you, too, then installing the Microsoft ACE OLEDB Provider as outlined <a href="http://blog.codefluententities.com/2011/01/20/microsoft-access-database-engine-2010-redistributable/">here</a> will help. Make sure you launch the installer from a command line with the &ldquo;/passive&rdquo; argument. Be wary that this might make Office behave strangely. I haven&rsquo;t noticed anything too bad so far, except that it now takes a minute or two to launch Office.</p>
+
+<p>Hope this helps. This is a bit of a quick fix to meet a time constraint, so there are probably better ways to do this. If you have suggestions please share them below!</p>
+]]></content>
+  </entry>
+  
+</feed>

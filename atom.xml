@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2014-12-04T23:55:16-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[The Game of Go as a Complex Network]]></title>
+    <link href="http://stevengt.github.io/blog/2014/12/03/the-game-of-go-as-a-complex-network/"/>
+    <updated>2014-12-03T20:45:53-05:00</updated>
+    <id>http://stevengt.github.io/blog/2014/12/03/the-game-of-go-as-a-complex-network</id>
+    <content type="html"><![CDATA[<p>I wrote some code in Python to construct a Pagerank vector of moves in the game of Go. Georgeot and Giraud discuss this method in their <a href="http://arxiv.org/abs/1105.2470">paper</a> but do not include any sample code, so I decided it would be fun to implement it myself and run it on some sample data from the <a href="http://www.u-go.net/gamerecords/">K Go Server</a>.</p>
+
+<p>The code on my <a href="https://github.com/stevengt/Go-Network">GitHub</a> should be a good starting point if you&rsquo;re looking to construct a network of moves in Go, although there are some differences in my implementation and the one used by Georgeot and Giraud – for example, I do not take into account all the symmetries of plaquettes that they do. Here is a comparison of the top ten moves for λ<sub>1</sub>.</p>
+
+<p><img src="http://stevengt.github.io/images/2014-12-03-the-game-of-go-as-a-complex-network/go.png" style="width:65%; height:65%"/></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Printing on Green Bar Style Paper]]></title>
+    <link href="http://stevengt.github.io/blog/2014/11/30/printing-on-green-bar-style-paper/"/>
+    <updated>2014-11-30T11:19:56-05:00</updated>
+    <id>http://stevengt.github.io/blog/2014/11/30/printing-on-green-bar-style-paper</id>
+    <content type="html"><![CDATA[<p>I like to look at code on green bar style paper, where alternating rows are different colors, because it&rsquo;s easier to read. I don&rsquo;t own actual paper to print it on but I found a neat command line tool <a href="http://www.perlmonks.org/bare/?node_id=391709">here</a> to export a program to a PostScript file with the appropriate styling. For example, using a2ps the following command will create a PostScript file that styles the program test.py .</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a2ps --prologue=matrix -o test.ps test.py</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Connecting to MS Access in Java]]></title>
+    <link href="http://stevengt.github.io/blog/2014/10/27/connecting-to-ms-access-in-java/"/>
+    <updated>2014-10-27T11:31:43-04:00</updated>
+    <id>http://stevengt.github.io/blog/2014/10/27/connecting-to-ms-access-in-java</id>
+    <content type="html"><![CDATA[<p>Java has stopped supporting the JDBC-ODBC Bridge with the release of JDK 8, so here is my (somewhat quick and dirty) way of working with MS Access.</p>
+
+<p>There are various alternatives you can try out such as <a href="http://ucanaccess.sourceforge.net/site.html">UCanAccess</a>, <a href="https://code.google.com/p/pypyodbc/">PyPyODBC</a>, or Easysoft&rsquo;s <a href="http://www.easysoft.com/developer/languages/c/odbc_tutorial.html#pre_req">API</a>. I&rsquo;ve messed around with a few of these and I feel that they aren&rsquo;t quite as powerful as the bridge offered in previous versions of Java, and I don&rsquo;t have the time right now to improve my C skills enough for the particular project I&rsquo;m working on.</p>
+
+<p>My solution, which seems to work fine so far, is to install Java 7 alongside Java 8, and use the built in JDBC-ODBC bridge. If portability is a concern for you then maybe this isn&rsquo;t your best option, but for my purposes I&rsquo;m fine with wrapping the code up in an executable.</p>
+
+<p>If this is all you need to get set up, then great! I&rsquo;m happy for you, I really am.</p>
+
+<p><img src="http://stevengt.github.io/images/2014-10-27-connecting-to-ms-access-in-java/happy.jpg" style="width:50%; height:50%"/></p>
+
+<p>I had trouble connecting to the ODBC driver, though, because I&rsquo;m using 32-bit MS Office on a 64-bit system. If this is a problem for you, too, then installing the Microsoft ACE OLEDB Provider as outlined <a href="http://blog.codefluententities.com/2011/01/20/microsoft-access-database-engine-2010-redistributable/">here</a> will help. Make sure you launch the installer from a command line with the &ldquo;/passive&rdquo; argument. Be wary that this might make Office behave strangely. I haven&rsquo;t noticed anything too bad so far, except that it now takes a minute or two to launch Office.</p>
+
+<p>Hope this helps. This is a bit of a quick fix to meet a time constraint, so there are probably better ways to do this. If you have suggestions please share them below!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Degrees of Separation in Movies]]></title>
+    <link href="http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/"/>
+    <updated>2014-10-26T20:36:15-04:00</updated>
+    <id>http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies</id>
+    <content type="html"><![CDATA[<p>Here&rsquo;s a fun fact for you: 91% of all movies are within six degrees of separation from each other.</p>
+
+<p>According to IMDb, anyway.</p>
+
+<p>I recently wrote a script in Python to search through a <a href="http://www.imdb.com/interfaces">snapshot of IMDb</a> for how many movies are within six degrees of separation from &ldquo;The Wizard of Oz&rdquo;. Any movie that shared an actor with &ldquo;The Wizard of Oz&rdquo; is degree 1, and any movie that shared an actor with a movie that shared an actor with &ldquo;The Wizard of Oz&rdquo; is degree 2, etc&hellip; The snapshot uses the following SQLite schema:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CREATE TABLE Actor (
+</span><span class='line'>    aid INTEGER PRIMARY KEY AUTOINCREMENT,
+</span><span class='line'>    first TEXT DEFAULT '',
+</span><span class='line'>    last TEXT DEFAULT '',
+</span><span class='line'>    dob DATE DEFAULT '',
+</span><span class='line'>    gender TEXT DEFAULT '');
+</span><span class='line'>
+</span><span class='line'>CREATE TABLE Movie (
+</span><span class='line'>    mid INTEGER PRIMARY KEY AUTOINCREMENT,
+</span><span class='line'>    title TEXT DEFAULT '',
+</span><span class='line'>    year INTEGER DEFAULT 0,
+</span><span class='line'>    rating TEXT DEFAULT '');
+</span><span class='line'>
+</span><span class='line'>CREATE TABLE Role (
+</span><span class='line'>    aid INTEGER REFERENCES Actor(aid),
+</span><span class='line'>    mid INTEGER REFERENCES Movie(mid),
+</span><span class='line'>    role TEXT DEFAULT '',
+</span><span class='line'>    billing INTEGER DEFAULT 0);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Here&rsquo;s the percent of all movies within 6 degrees:</p>
+
+<p><img src="http://stevengt.github.io/images/2014-10-26-degrees-of-separation-in-movies/fig1.png" style="width:50%; height:50%"/></p>
+
+<p>When I saw this I started to wonder what percent of movies is &ldquo;The Wizard of Oz&rdquo; connected to for any degree number? I ran the code again for 15 degrees this time, and it looks like it tops out at about 91%&hellip;</p>
+
+<p><img src="http://stevengt.github.io/images/2014-10-26-degrees-of-separation-in-movies/fig2.png" style="width:50%; height:50%"/></p>
+
+<p>Well that&rsquo;s cool I guess, but let&rsquo;s look at other movies! I&rsquo;m sure you&rsquo;re all wondering how well connected Nicolas Cage is – I have a bit of a soft spot for <a href="http://www.mspaintadventures.com/?s=6&amp;p=003831">Con Air</a>.</p>
+
+<p><img src="http://stevengt.github.io/images/2014-10-26-degrees-of-separation-in-movies/fig3.png" style="width:50%; height:50%"/></p>
+
+<p>After looking around at a few other movies, it seems like all of them top out at 91% after degree 4 or so. I guess this means that 9% of the movies on IMDb star actors who are not even remotely famous. You can find my code <a href="https://github.com/stevengt/Misc.-Small-Projects/blob/master/degreesOfSeparation.py">here</a>, let me know if you find any other cool trends!</p>
+
+<p><img src="http://stevengt.github.io/images/2014-10-26-degrees-of-separation-in-movies/cage.jpg" style="width:40%"/></p>
+]]></content>
+  </entry>
+  
+</feed>

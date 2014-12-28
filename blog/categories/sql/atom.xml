@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Sql | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/sql/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2014-12-04T23:55:16-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Degrees of Separation in Movies]]></title>
+    <link href="http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies/"/>
+    <updated>2014-10-26T20:36:15-04:00</updated>
+    <id>http://stevengt.github.io/blog/2014/10/26/degrees-of-separation-in-movies</id>
+    <content type="html"><![CDATA[<p>Here&rsquo;s a fun fact for you: 91% of all movies are within six degrees of separation from each other.</p>
+
+<p>According to IMDb, anyway.</p>
+
+<p>I recently wrote a script in Python to search through a <a href="http://www.imdb.com/interfaces">snapshot of IMDb</a> for how many movies are within six degrees of separation from &ldquo;The Wizard of Oz&rdquo;. Any movie that shared an actor with &ldquo;The Wizard of Oz&rdquo; is degree 1, and any movie that shared an actor with a movie that shared an actor with &ldquo;The Wizard of Oz&rdquo; is degree 2, etc&hellip; The snapshot uses the following SQLite schema:</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>CREATE TABLE Actor (
+</span><span class='line'>    aid INTEGER PRIMARY KEY AUTOINCREMENT,
+</span><span class='line'>    first TEXT DEFAULT &lsquo;&rsquo;,
+</span><span class='line'>    last TEXT DEFAULT &lsquo;&rsquo;,
+</span><span class='line'>    dob DATE DEFAULT &lsquo;&rsquo;,
+</span><span class='line'>    gender TEXT DEFAULT &lsquo;&rsquo;);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>CREATE TABLE Movie (
+</span><span class='line'>    mid INTEGER PRIMARY KEY AUTOINCREMENT,
+</span><span class='line'>    title TEXT DEFAULT &lsquo;&rsquo;,
+</span><span class='line'>    year INTEGER DEFAULT 0,
+</span><span class='line'>    rating TEXT DEFAULT &lsquo;&rsquo;);&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>CREATE TABLE Role (
+</span><span class='line'>    aid INTEGER REFERENCES Actor(aid),
+</span><span class='line'>    mid INTEGER REFERENCES Movie(mid),
+</span><span class='line'>    role TEXT DEFAULT &lsquo;&rsquo;,
+</span><span class='line'>    billing INTEGER DEFAULT 0);</span></code></pre></td></tr></table></div></figure></p>
+
+<p>Here&rsquo;s the percent of all movies within 6 degrees:</p>
+
+<p><img src="/images/2014-10-26-degrees-of-separation-in-movies/fig1.png" style="width:50%; height:50%"/></p>
+
+<p>When I saw this I started to wonder what percent of movies is &ldquo;The Wizard of Oz&rdquo; connected to for any degree number? I ran the code again for 15 degrees this time, and it looks like it tops out at about 91%&hellip;</p>
+
+<p><img src="/images/2014-10-26-degrees-of-separation-in-movies/fig2.png" style="width:50%; height:50%"/></p>
+
+<p>Well that&rsquo;s cool I guess, but let&rsquo;s look at other movies! I&rsquo;m sure you&rsquo;re all wondering how well connected Nicolas Cage is – I have a bit of a soft spot for <a href="http://www.mspaintadventures.com/?s=6&amp;p=003831">Con Air</a>.</p>
+
+<p><img src="/images/2014-10-26-degrees-of-separation-in-movies/fig3.png" style="width:50%; height:50%"/></p>
+
+<p>After looking around at a few other movies, it seems like all of them top out at 91% after degree 4 or so. I guess this means that 9% of the movies on IMDb star actors who are not even remotely famous. You can find my code <a href="https://github.com/stevengt/Misc.-Small-Projects/blob/master/degreesOfSeparation.py">here</a>, let me know if you find any other cool trends!</p>
+
+<p><img src="/images/2014-10-26-degrees-of-separation-in-movies/cage.jpg" style="width:40%"/></p>
+]]></content>
+  </entry>
+  
+</feed>
