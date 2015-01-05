@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Chrome, | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/chrome/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2015-01-04T20:41:19-05:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[House of Leaves Chrome Extension]]></title>
+    <link href="http://stevengt.github.io/blog/2015/01/04/house-of-leaves-chrome-extension/"/>
+    <updated>2015-01-04T20:31:53-05:00</updated>
+    <id>http://stevengt.github.io/blog/2015/01/04/house-of-leaves-chrome-extension</id>
+    <content type="html"><![CDATA[<p>&ldquo;<span style="color:blue">House</span> of Leaves&rdquo; is my favorite book ever. If you haven&rsquo;t read it, one thing to know about it is that every instance of the word <span style="color:blue">house</span> is highlighted in blue. I decided it would be fun to bring this into web surfing, so I made a <a href="https://chrome.google.com/webstore/detail/house-of-leaves-highlight/dchdopmbaeadekogdimbljfchfnhjkag">chrome extension</a> that does the same thing using jQuery&rsquo;s highlight function. It&rsquo;s a little buggy but seems to work well enough. Enjoy!</p>
+]]></content>
+  </entry>
+  
+</feed>
