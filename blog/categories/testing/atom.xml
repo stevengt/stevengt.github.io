@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Testing | My Octopress Blog]]></title>
+  <link href="http://stevengt.github.io/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://stevengt.github.io/"/>
+  <updated>2015-08-13T12:20:07-04:00</updated>
+  <id>http://stevengt.github.io/</id>
+  <author>
+    <name><![CDATA[Steven Thomas]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Unit Testing With OpenFrameworks in XCode]]></title>
+    <link href="http://stevengt.github.io/blog/2015/08/13/unit-testing-with-openframeworks-in-xcode/"/>
+    <updated>2015-08-13T11:49:10-04:00</updated>
+    <id>http://stevengt.github.io/blog/2015/08/13/unit-testing-with-openframeworks-in-xcode</id>
+    <content type="html"><![CDATA[<p>I had to struggle unnecessarily to set up unit testing with an OpenFrameworks project in Xcode. If you are inpatient like me and don&rsquo;t mind a bit of a hacky solution here are the steps I used.</p>
+
+<!-- more -->
+
+
+
+
+<ol>
+    <li>Add a test target named &#8220;tests&#8221; to your project.
+    <li>Add <a href="http://cxxtest.com/">CxxTest-4.3</a> to your source root folder and add its location to the header search paths.
+    <li>Create your unit tests in the &#8220;tests&#8221; target.
+    <li>Create the following shell script in your source root folder and name it &#8220;cxxtest.sh&#8221;.
+    
+        <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#!/bin/bash
+</span><span class='line'>    # cxxtest script
+</span><span class='line'>    ./cxxtest-4.3/bin/cxxtestgen --error-printer -o ./cxxtest-4.3/bin/runner.cpp ./tests/*
+</span><span class='line'>    perl -pi -w -e 's/&lt;cxxtest\//&lt;/g;' ./cxxtest-4.3/bin/runner.cpp
+</span><span class='line'>    rm ./cxxtest-4.3/bin/runner
+</span><span class='line'>    g++ -std=c++11 -stdlib=libc++ -o ./cxxtest-4.3/bin/runner  -I ./cxxtest-4.3/cxxtest/ -I ./src/ ./cxxtest-4.3/bin/runner.cpp
+</span><span class='line'>    ./cxxtest-4.3/bin/runner</span></code></pre></td></tr></table></div></figure>
+
+</ol>
+
+
+<p>If everything is set up right you should see the following result when you run &ldquo;cxxtest.sh&rdquo; in the terminal!</p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Running cxxtest tests (1 test).OK!</span></code></pre></td></tr></table></div></figure></p>
+
+<p>The script creates &ldquo;runner.cpp&rdquo; from your tests, edits the include statements to match your project structure, and then compiles and runs the test.</p>
+
+<p>Hope this helps!</p>
+]]></content>
+  </entry>
+  
+</feed>
