@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stevengt.github.io/atom.xml" rel="self"/>
   <link href="http://stevengt.github.io/"/>
-  <updated>2015-08-12T21:26:27-04:00</updated>
+  <updated>2015-08-12T21:36:30-04:00</updated>
   <id>http://stevengt.github.io/</id>
   <author>
     <name><![CDATA[Steven Thomas]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Maven 'the Forked VM Terminated Without Saying Properly Goodbye' Error]]></title>
+    <link href="http://stevengt.github.io/blog/2015/08/12/maven-the-forked-vm-terminated-without-saying-properly-goodbye-error/"/>
+    <updated>2015-08-12T21:31:15-04:00</updated>
+    <id>http://stevengt.github.io/blog/2015/08/12/maven-the-forked-vm-terminated-without-saying-properly-goodbye-error</id>
+    <content type="html"><![CDATA[<p>I recently got this error while building a project in IntelliJ. It turns out the problem was related to improper capitalization of import statements in some of the files. If you get this error, try running the build with -x or -e to pin down where it is coming from and see if changing the import statements helps.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[House of Leaves Chrome Extension]]></title>
