@@ -6,7 +6,7 @@ comments: true
 categories: XCode, OpenFrameworks, unit testing
 ---
 
-I had to struggle unnecessarily to set up unit testing with an OpenFrameworks project in Xcode. If you are inpatient like me and don't mind a bit of a hacky solution here are the steps I used.
+I had to struggle unnecessarily to set up unit testing with an OpenFrameworks project in Xcode. If you are impatient like me and don't mind a bit of a hacky solution here are the steps I used.
 
 <!-- more -->
 
