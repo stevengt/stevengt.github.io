@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Openframeworks, | My Octopress Blog]]></title>
   <link href="http://stevengt.github.io/blog/categories/openframeworks/atom.xml" rel="self"/>
   <link href="http://stevengt.github.io/"/>
-  <updated>2015-09-12T15:04:30-04:00</updated>
+  <updated>2015-09-12T15:08:03-04:00</updated>
   <id>http://stevengt.github.io/</id>
   <author>
     <name><![CDATA[Steven Thomas]]></name>
@@ -18,7 +18,7 @@
     <link href="http://stevengt.github.io/blog/2015/08/13/unit-testing-with-openframeworks-in-xcode/"/>
     <updated>2015-08-13T11:49:10-04:00</updated>
     <id>http://stevengt.github.io/blog/2015/08/13/unit-testing-with-openframeworks-in-xcode</id>
-    <content type="html"><![CDATA[<p>I had to struggle unnecessarily to set up unit testing with an OpenFrameworks project in Xcode. If you are inpatient like me and don&rsquo;t mind a bit of a hacky solution here are the steps I used.</p>
+    <content type="html"><![CDATA[<p>I had to struggle unnecessarily to set up unit testing with an OpenFrameworks project in Xcode. If you are impatient like me and don&rsquo;t mind a bit of a hacky solution here are the steps I used.</p>
 
 <!-- more -->
 
