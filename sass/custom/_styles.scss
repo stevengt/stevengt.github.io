@@ -78,7 +78,6 @@ body{
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	padding-bottom: 2em;
-
 }
 
 
@@ -129,6 +128,7 @@ aside.sidebar h1{
 	margin-bottom: -2em;
 	background: url("/images/dotted-border.png") bottom left repeat-x;
 	padding-bottom: 1px;
+	overflow-y: auto;
 }
 
 #about_me h1{
