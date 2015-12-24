@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stevengt.github.io/atom.xml" rel="self"/>
   <link href="http://stevengt.github.io/"/>
-  <updated>2015-10-01T15:07:20-04:00</updated>
+  <updated>2015-12-24T12:20:28-05:00</updated>
   <id>http://stevengt.github.io/</id>
   <author>
     <name><![CDATA[Steven Thomas]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Running a Node.js App Locally Using Heroku web.1 | module.js:329 Error]]></title>
+    <link href="http://stevengt.github.io/blog/2015/12/24/running-a-node-dot-js-app-locally-using-heroku-web-dot-1-%7C-module-dot-js-329-error/"/>
+    <updated>2015-12-24T12:16:20-05:00</updated>
+    <id>http://stevengt.github.io/blog/2015/12/24/running-a-node-dot-js-app-locally-using-heroku-web-dot-1-|-module-dot-js-329-error</id>
+    <content type="html"><![CDATA[<p>If you are getting an error similar to the one above when trying to run a Node.js app locally with Heroku, the guide <a href="https://devcenter.heroku.com/articles/deploying-nodejs">here</a> gives the exact commands you should run to get it working. My problem was that I installed all the dependencies globally instead of locally.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Unit Testing With OpenFrameworks in XCode]]></title>
