@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stevengt.github.io/atom.xml" rel="self"/>
   <link href="http://stevengt.github.io/"/>
-  <updated>2015-12-24T12:20:28-05:00</updated>
+  <updated>2015-12-24T13:50:59-05:00</updated>
   <id>http://stevengt.github.io/</id>
   <author>
     <name><![CDATA[Steven Thomas]]></name>
@@ -12,6 +12,39 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Getting socket.io v1.x.x to Work on Heroku]]></title>
+    <link href="http://stevengt.github.io/blog/2015/12/24/getting-socket-dot-io-to-work-on-heroku/"/>
+    <updated>2015-12-24T13:41:10-05:00</updated>
+    <id>http://stevengt.github.io/blog/2015/12/24/getting-socket-dot-io-to-work-on-heroku</id>
+    <content type="html"><![CDATA[<p>Many outdated tutorials will tell you that you need to add the below code to your server in order for socket.io code to work.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>io.configure(function () {
+</span><span class='line'>    io.set("transports", ["xhr-polling"]);
+</span><span class='line'>    io.set("polling duration", 10);
+</span><span class='line'>});</span></code></pre></td></tr></table></div></figure>
+
+
+<p>However, in newer versions of socket.io (v1.x.x), the set() and configure() methods are deprecated, as outlined <a href="http://socket.io/docs/migrating-from-0-9/#configuration-differences">here</a>, and they result in the error &ldquo;io.configure is not a function&rdquo;. Instead, you should pass in the settings when you initialize the instance, like this:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>var io = require('socket.io')({
+</span><span class='line'>    "transports" : ["xhr-polling"],
+</span><span class='line'>    "polling duration" : 10
+</span><span class='line'>}).listen(server);</span></code></pre></td></tr></table></div></figure>
+
+
+<p>That should be all you need to get your app running!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Running a Node.js App Locally Using Heroku web.1 | module.js:329 Error]]></title>

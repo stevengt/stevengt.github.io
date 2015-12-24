@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://stevengt.github.io/blog/2015/12/24/getting-socket-dot-io-to-work-on-heroku/</loc>
+    <lastmod>2015-12-24T13:41:10-05:00</lastmod>
+  </url>
+  <url>
     <loc>http://stevengt.github.io/blog/2015/12/24/running-a-node-dot-js-app-locally-using-heroku-web-dot-1-%7C-module-dot-js-329-error/</loc>
     <lastmod>2015-12-24T12:16:20-05:00</lastmod>
   </url>

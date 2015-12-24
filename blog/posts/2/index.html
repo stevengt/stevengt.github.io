@@ -9,7 +9,7 @@
   <meta name="author" content="Steven Thomas">
 
   
-  <meta name="description" content="I like to look at code on green bar style paper, where alternating rows are different colors, because it&rsquo;s easier to read. I don&rsquo;t own &hellip;">
+  <meta name="description" content="I wrote some code in Python to construct a Pagerank vector of moves in the game of Go. Georgeot and Giraud discuss this method in their paper but do &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,39 @@
           <div id="content">
               <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/12/03/the-game-of-go-as-a-complex-network/">The Game of Go as a Complex Network</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2014-12-03T20:45:53-05:00'><span class='date'><span class='date-month'>Dec</span> <span class='date-day'>3</span><span class='date-suffix'>rd</span>, <span class='date-year'>2014</span></span> <span class='time'>8:45 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I wrote some code in Python to construct a Pagerank vector of moves in the game of Go. Georgeot and Giraud discuss this method in their <a href="http://arxiv.org/abs/1105.2470">paper</a> but do not include any sample code, so I decided it would be fun to implement it myself and run it on some sample data from the <a href="http://www.u-go.net/gamerecords/">K Go Server</a>.</p>
+
+<p>The code on my <a href="https://github.com/stevengt/Go-Network">GitHub</a> should be a good starting point if you&rsquo;re looking to construct a network of moves in Go, although there are some differences in my implementation and the one used by Georgeot and Giraud – for example, I do not take into account all the symmetries of plaquettes that they do. Here is a comparison of the top ten moves for λ<sub>1</sub>.</p>
+
+<p><img src="/images/2014-12-03-the-game-of-go-as-a-complex-network/go.png" style="width:65%; height:65%"/></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -276,6 +309,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/12/24/getting-socket-dot-io-to-work-on-heroku/">Getting socket.io v1.x.x to Work on Heroku</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/12/24/running-a-node-dot-js-app-locally-using-heroku-web-dot-1-%7C-module-dot-js-329-error/">Running a Node.js App Locally Using Heroku web.1 | module.js:329 Error</a>
       </li>
     
@@ -289,10 +326,6 @@
     
       <li class="post">
         <a href="/blog/2015/01/04/house-of-leaves-chrome-extension/">House of Leaves Chrome Extension</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/03/the-game-of-go-as-a-complex-network/">The Game of Go as a Complex Network</a>
       </li>
     
   </ul>
