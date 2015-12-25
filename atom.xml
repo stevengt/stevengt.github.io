@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://stevengt.github.io/atom.xml" rel="self"/>
   <link href="http://stevengt.github.io/"/>
-  <updated>2015-12-24T15:52:09-05:00</updated>
+  <updated>2015-12-25T08:26:55-05:00</updated>
   <id>http://stevengt.github.io/</id>
   <author>
     <name><![CDATA[Steven Thomas]]></name>
@@ -41,6 +41,8 @@
 </span><span class='line'>    "polling duration" : 10
 </span><span class='line'>}).listen(server);</span></code></pre></td></tr></table></div></figure>
 
+
+<p>Also, in your client code you should use the &ldquo;ws&rdquo; protocol instead of &ldquo;http&rdquo; when trying to connect.</p>
 
 <p>That should be all you need to get your app running!</p>
 ]]></content>
