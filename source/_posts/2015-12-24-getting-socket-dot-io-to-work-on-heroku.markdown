@@ -24,4 +24,6 @@ var io = require('socket.io')({
 }).listen(server); 
 {% endcodeblock %}
 
+Also, in your client code you should use the "ws" protocol instead of "http" when trying to connect.
+
 That should be all you need to get your app running!
